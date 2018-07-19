@@ -10,8 +10,7 @@
 	<title>Mark Admani</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-
-   <!-- mobile specific metas
+   <!--- Viewport Code
    ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
@@ -67,10 +66,26 @@
 		  text-align: center;
 		}
 		</style>
-   <!-- script
+   <!-- Button Code
    ================================================== -->
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	.btn {
+	  background-color: #ddd;
+	  border: none;
+	  color: black;
+	  padding: 16px 32px;
+	  text-align: center;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  transition: 0.3s;
+	}
+
+	.btn:hover {
+	  background-color: #3e8e41;
+	  color: white;
+	}
+	</style>
 
    <!-- favicons
 	================================================== -->
@@ -85,6 +100,7 @@
 <div style="display:none;" id="myDiv" class="animate-bottom">
   <h2>Hello!</h2>
   <p>Welcome to my portfolio. It's a work in progress.</p>
+  <button class="btn">Hover Over Me</button>
 </div>
 
 <script>
