@@ -13,18 +13,26 @@
 
    <!-- mobile specific metas
    ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<style>
-		.loader {
-  		border: 16px solid #f3f3f3;
-  		border-radius: 50%;
-  		border-top: 16px solid #3498db;
-  		width: 120px;
-  		height: 120px;
-  		-webkit-animation: spin 2s linear infinite; /* Safari */
-		animation: spin 2s linear infinite;
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		/* Center the loader */
+		#loader {
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  z-index: 1;
+		  width: 150px;
+		  height: 150px;
+		  margin: -75px 0 0 -75px;
+		  border: 16px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 16px solid #3498db;
+		  width: 120px;
+		  height: 120px;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite;
 		}
-		/* Safari */
+
 		@-webkit-keyframes spin {
 		  0% { -webkit-transform: rotate(0deg); }
 		  100% { -webkit-transform: rotate(360deg); }
@@ -34,7 +42,31 @@
 		  0% { transform: rotate(0deg); }
 		  100% { transform: rotate(360deg); }
 		}
-	</style>
+
+		/* Add animation to "page content" */
+		.animate-bottom {
+		  position: relative;
+		  -webkit-animation-name: animatebottom;
+		  -webkit-animation-duration: 1s;
+		  animation-name: animatebottom;
+		  animation-duration: 1s
+		}
+
+		@-webkit-keyframes animatebottom {
+		  from { bottom:-100px; opacity:0 } 
+		  to { bottom:0px; opacity:1 }
+		}
+
+		@keyframes animatebottom { 
+		  from{ bottom:-100px; opacity:0 } 
+		  to{ bottom:0; opacity:1 }
+		}
+
+		#myDiv {
+		  display: none;
+		  text-align: center;
+		}
+		</style>
    <!-- script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
@@ -46,30 +78,27 @@
 
 </head>
 
-<body id="top">
+<body onload="myFunction()" style="margin:0;">
 
-	<!-- header
-   ================================================== -->
-   <header>
-   	<div class="row">
-   		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span>Menu</span></a>
-		   	<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#Intro" title="">Home</a></li>
-						<li><a class="smoothscroll"  href="#About" title="">About Me</a></li>
-						<li><a class="smoothscroll"  href="#Work" title="">Work Experience</a></li>
-						<li><a class="smoothscroll"  href="#More" title="">More</a></li>
-					</ul>
-				<div class="loader"></div>
-				</nav>
-   		</div> <!-- /top-bar -->
-   	</div> <!-- /row -->
-   </header> <!-- /header -->
-   <div id="preloader">
-    	<div id="loader"></div>
-   </div>
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Tada!</h2>
+  <p>Some text in my newly loaded page..</p>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 
 </body>
-
 </html>
