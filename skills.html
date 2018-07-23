@@ -7,14 +7,14 @@
 
 <!--- basic page needs================================================== -->
  
-    <meta charset="utf-8">
-    <title>Mark Admani</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="utf-8">
+	<title>Mark Admani</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
   
 <!--- Loading Screen Code================================================== -->
 	
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 		/* Center the loader */
 		#loader {
@@ -83,22 +83,86 @@
 	}
 	</style>
 
-<!-- favicons================================================== -->
-	<link rel="icon" href="https://github.com/MarkAdmani/MarkAdmani.github.io/raw/master/favicon.ico?v=2" />
+<!-- Accordion Code================================================== -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	.accordion {
+	    background-color: #eee;
+	    color: #444;
+	    cursor: pointer;
+	    padding: 18px;
+	    width: 100%;
+	    border: none;
+	    text-align: left;
+	    outline: none;
+	    font-size: 15px;
+	    transition: 0.4s;
+	}
 
+	.active, .accordion:hover {
+	    background-color: #ccc;
+	}
+
+	.panel {
+	    padding: 0 18px;
+	    background-color: white;
+	    max-height: 0;
+	    overflow: hidden;
+	    transition: max-height 0.2s ease-out;
+	}
+	</style>		
+	
+<!-- favicon================================================== -->
+	<link rel="icon" href="https://github.com/MarkAdmani/MarkAdmani.github.io/raw/master/favicon.ico?v=2" />
+	
+	
 </head>
 
+<!-- Body Code================================================== -->
 <body onload="myFunction()" style="margin:0;">
 
 <div id="loader"></div>
 
 <div style="display:none;" id="myDiv" class="animate-bottom">
+	
+<!-- Body Begins here ============================================= -->
+	
   <h2>Hello!</h2>
   <p>This is my skills page. Mad skills.</p>
 	<a href="http://markadmani.com/index"><button class="btn">Home</button></a>
 	<a href="http://markadmani.com/about"><button class="btn">About Me</button></a>
 	<a href="http://markadmani.com/resume"><button class="btn">Resume</button></a>
 	<a href="http://markadmani.com/projects"><button class="btn">Projects</button></a>
+
+<!-- Technical Skills ============================================= -->
+	
+<h2>Technical Skills</h2>
+	<button class="accordion">AutoCAD</button>
+	<div class="panel">
+	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+
+	<button class="accordion">Inventor</button>
+	<div class="panel">
+	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+
+	<button class="accordion">Microsoft Office</button>
+	<div class="panel">
+	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
+	<button class="accordion">Engineering Drawings</button>
+	<div class="panel">
+	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
+	<button class="accordion">Electrical Design</button>
+	<div class="panel">
+	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
 </div>
 
 	
